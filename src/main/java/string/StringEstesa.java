@@ -2,6 +2,7 @@ package string;
 
 import java.util.regex.Pattern;
 
+/** Classe che simula la classe base String, con i metodi isEmpty(), isBlank(), isNumeric() **/
 public class StringEstesa {
 
     /** Valore della stringa **/
@@ -25,7 +26,7 @@ public class StringEstesa {
      * @return true se è vuota o null, altrimenti false
      */
     public boolean isEmpty() {
-        return ((value == null)||(value.equals("")));
+        return value == null || value.equals("");
     }
 
     /**
@@ -33,7 +34,8 @@ public class StringEstesa {
      * @return true se è composta da soli spazi, stringa vuota o null, altrimenti false
      */
     public boolean isBlank() {
-        return ((value == null)||(value.equals("")||(value.equals(" ")))) ;
+        Pattern p = Pattern.compile("\\s+");
+        return value == null || value.equals("") || p.matcher(value).matches();
     }
 
     /**

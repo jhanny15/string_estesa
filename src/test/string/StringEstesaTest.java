@@ -4,7 +4,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 class StringEstesaTest {
 
@@ -35,7 +34,13 @@ class StringEstesaTest {
 
     @Test //2.c
     void Test_isBlank_Spazio() {
-        string.setValue(" ");
+        string.setValue("   ");
+        Assertions.assertEquals(string.isBlank(), StringUtils.isBlank(string.getValue()));
+    }
+
+    @Test //2.d
+    void Test_isBlank_Char() {
+        string.setValue(" A ");
         Assertions.assertEquals(string.isBlank(), StringUtils.isBlank(string.getValue()));
     }
 

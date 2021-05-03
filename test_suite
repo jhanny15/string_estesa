@@ -1,24 +1,27 @@
 Test Suite
 
-1.a) Se value = null, StringEstesa.isEmpty() confrontato con
+1.a) Se la stringa è null, StringEstesa.isEmpty() confrontato con
     StringUtils.isEmpty() deve ritornare true;
 
-1.b) Se value = "", StringEstesa.isEmpty() confrontato con
+1.b) Se la stringa è una stringa vuota, StringEstesa.isEmpty() confrontato con
     StringUtils.isEmpty() deve ritornare true;
 
 
-2.a) Se value = null, StringEstesa.isBlank() confrontato con
+2.a) Se la stringa è null, StringEstesa.isBlank() confrontato con
     StringUtils.isBlank() deve ritornare true;
 
-2.b) Se value = "", StringEstesa.isBlank() confrontato con
+2.b) Se la stringa è una stringa vuota, StringEstesa.isBlank() confrontato con
     StringUtils.isBlank() deve ritornare true;
 
-2.c) Se value = " ", StringEstesa.isBlank() confrontato con
+2.c) Se la stringa contiene solo spazi, StringEstesa.isBlank() confrontato con
     StringUtils.isBlank() deve ritornare true;
 
+2.d) Se la stringa inizia con uno spazio e poi un carattere, StringEstesa.isBlank()
+    confrontato con StringUtils.isBlank() deve ritornare false;
 
-3.a) Se value = "solo numeri", StringEstesa.isNumeric() confrontato con
+
+3.a) Se la stringa contiene solo numeri, StringEstesa.isNumeric() confrontato con
     StringUtils.isNumeric() deve ritornare true;
 
-3.b) Se value = "qualsiasi carattere e numeri", StringEstesa.isNumeric() confrontato con
+3.b) Se la stringa contiene qualsiasi carattere, StringEstesa.isNumeric() confrontato con
     StringUtils.isNumeric() deve ritornare false;
