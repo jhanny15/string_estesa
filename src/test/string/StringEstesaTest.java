@@ -7,7 +7,8 @@ import org.junit.jupiter.api.Test;
 
 class StringEstesaTest {
 
-    StringEstesa string = new StringEstesa();
+    final StringEstesa string = new StringEstesa();
+
 
     @Test //1.a
     void Test_isEmpty_null() {
@@ -20,11 +21,11 @@ class StringEstesaTest {
         Assertions.assertEquals(string.isEmpty(), StringUtils.isEmpty(string.getValue()));
     }
 
+
     @Test //2.a
     void Test_isBlank_null() {
         Assertions.assertEquals(string.isBlank(), StringUtils.isBlank(string.getValue()));
     }
-
 
     @Test //2.b
     void Test_isBlank_Vuota() {
@@ -43,6 +44,7 @@ class StringEstesaTest {
         string.setValue(" A ");
         Assertions.assertEquals(string.isBlank(), StringUtils.isBlank(string.getValue()));
     }
+
 
     @Test //3.a
     void isNumeric() {

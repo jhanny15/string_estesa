@@ -1,12 +1,10 @@
 package string;
 
-import org.apache.commons.lang3.StringUtils;
-
 public class ProvaString {
 
     public static void main(String[] args) {
 
-        StringEstesa string = new StringEstesa();
+        StringEstesa string = new StringEstesa(" A ");
 
         System.out.println("IsEmpty is:" + string.isEmpty());
 
