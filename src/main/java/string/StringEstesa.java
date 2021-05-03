@@ -1,10 +1,8 @@
 package string;
 
-public class StringEstesa {
+import java.util.regex.Pattern;
 
-    public String getValue() {
-        return value;
-    }
+public class StringEstesa {
 
     /** Valore della stringa **/
     private String value;
@@ -19,7 +17,7 @@ public class StringEstesa {
      * @param s (valore della stringa)
      */
     public StringEstesa(String s) {
-        this.value = s;
+        value = s;
     }
 
     /**
@@ -27,8 +25,7 @@ public class StringEstesa {
      * @return true se è vuota o null, altrimenti false
      */
     public boolean isEmpty() {
-
-        return true;
+        return ((value == null)||(value.equals("")));
     }
 
     /**
@@ -37,20 +34,26 @@ public class StringEstesa {
      */
     public boolean isBlank() {
 
-        return true;
+        return ((value == null)||(value.equals("")||(value.equals(" ")))) ;
     }
 
     /**
      * Metodo che controlla se la stringa è composta da soli numeri
+     * Pattern p, un patter che controlla se value tiene valori numerici
      * @return true se è composta da soli numeri, false se è vuota o null
      */
     public boolean isNumeric() {
-
-        return true;
+        Pattern p = Pattern.compile("\\d+");
+        return p.matcher(value).matches();
     }
 
+    public String getValue() {
+        return value;
+    }
 
-
+    public void setValue(String value) {
+        this.value = value;
+    }
 }
 
 
