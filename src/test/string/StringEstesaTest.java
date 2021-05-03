@@ -9,7 +9,6 @@ class StringEstesaTest {
 
     final StringEstesa string = new StringEstesa();
 
-
     @Test //1.a
     void Test_isEmpty_null() {
         Assertions.assertEquals(string.isEmpty(), StringUtils.isEmpty(string.getValue()));
@@ -47,13 +46,13 @@ class StringEstesaTest {
 
 
     @Test //3.a
-    void isNumeric() {
+    void Test_isNumeric() {
         string.setValue("030521");
         Assertions.assertEquals(string.isNumeric(), StringUtils.isNumeric(string.getValue()));
     }
 
     @Test //3.b
-    void isNumeric_Char() {
+    void Test_isNumeric_Char() {
         string.setValue(" 030521");
         Assertions.assertEquals(string.isNumeric(), StringUtils.isNumeric(string.getValue()));
     }
