@@ -13,8 +13,8 @@ public class StringEstesa {
     public StringEstesa() {}
 
     /**
-     * Costruttore di StringEstesa con il parametro
-     * @param s (valore della stringa)
+     * Costruttore di StringEstesa con argomento
+     * @param s (la stringa)
      */
     public StringEstesa(String s) {
         value = s;
@@ -33,14 +33,14 @@ public class StringEstesa {
      * @return true se è composta da soli spazi, stringa vuota o null, altrimenti false
      */
     public boolean isBlank() {
-
         return ((value == null)||(value.equals("")||(value.equals(" ")))) ;
     }
 
     /**
      * Metodo che controlla se la stringa è composta da soli numeri
-     * Pattern p, un patter che controlla se value tiene valori numerici
-     * @return true se è composta da soli numeri, false se è vuota o null
+     * Pattern p, un pattern che controlla se value tiene valori numerici
+     * @return true se è composta da soli numeri, false se è vuota, null o
+     * se tiene altri caratteri che non sono numeri
      */
     public boolean isNumeric() {
         Pattern p = Pattern.compile("\\d+");
