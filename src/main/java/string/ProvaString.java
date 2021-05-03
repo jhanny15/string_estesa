@@ -6,13 +6,27 @@ public class ProvaString {
 
     public static void main(String[] args) {
 
-        StringEstesa e = new StringEstesa();
-        StringEstesa b = new StringEstesa(" ");
-        StringEstesa n = new StringEstesa("0192");
+        StringEstesa string = new StringEstesa();
 
-        System.out.println("IsEmpty is:" + e.isEmpty());
-        System.out.println("IsBlank is:" + b.isBlank());
-        System.out.println("IsNumeric is:" + n.isNumeric());
+        System.out.println("IsEmpty is:" + string.isEmpty());
+
+        string.setValue("");
+        System.out.println("IsEmpty is:" + string.isEmpty());
+
+        string.setValue(null);
+        System.out.println("IsBlank is:" + string.isBlank());
+
+        string.setValue("");
+        System.out.println("IsBlank is:" + string.isBlank());
+
+        string.setValue(" ");
+        System.out.println("IsBlank is:" + string.isBlank());
+
+        string.setValue("92");
+        System.out.println("IsNumeric is:" + string.isNumeric());
+
+        string.setValue(" 92 a");
+        System.out.println("IsNumeric is:" + string.isNumeric());
     }
 }
 
